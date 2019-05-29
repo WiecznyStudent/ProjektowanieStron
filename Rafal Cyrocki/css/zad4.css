@@ -1,0 +1,86 @@
+q {
+    quotes: "“" "”" "‘" "’";
+}
+
+q:before {
+    content: open-quote;
+}
+
+q:after {
+    content: close-quote;
+}
+
+q > q {
+    quotes: ">" "<" ">" "<";
+}
+
+q > q:before {
+    content: open-quote;
+}
+
+q > q:after {
+    content: close-quote;
+}
+
+q > q > q{
+    quotes: "/" "\\" "/" "\\";
+}
+
+q > q > q:before {
+    content: open-quote;
+}
+
+q > q > q:after {
+    content: close-quote;
+}
+
+q> q > q > q{
+    quotes: "$" "$" "$" "$";
+}
+
+q > q > q > q:before {
+    content: open-quote;
+}
+
+q> q > q > q:after {
+    content: close-quote;
+}
+
+/* 2.Pkt */
+
+p{
+    text-transform: capitalize;
+    text-indent: 2em;
+}
+
+/*3.Pkt*/
+
+p:hover, q:hover, h1:hover, a:hover, td:hover, th:hover {
+    background-color: gray !important;
+}
+/*4.pkt*/
+::selection {
+    background: #33ff16 !important;
+    color:red !important;
+}
+::-moz-selection {
+    background: #36ff1d !important;
+    color:red !important;
+}
+
+/*pkt5*/
+.tabelaWCiapki tr:nth-child(odd) td:nth-child(even) {
+    background: azure;
+}
+
+.tabelaWCiapki tr:nth-child(odd) td:nth-child(odd) {
+    background: rebeccapurple;
+}
+
+.tabelaWCiapki tr:nth-child(even) td:nth-child(even) {
+    background: firebrick;
+}
+
+.tabelaWCiapki tr:nth-child(even) td:nth-child(odd) {
+    background: darkgoldenrod;
+}
